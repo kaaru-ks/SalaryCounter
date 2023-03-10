@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    display:flex;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+    background-image:url('https://tse3.mm.bing.net/th?id=OIP.uHeunZge_TfstdQKq3EOHgAAAA&pid=Api&P=0');
+}
+.container{
+    max-width:700px;
+    width:100%;
+    background:#fff;
+    padding:25px 30px;
+    border-radius:25px;
+    height: 510px;
+}
+.container .title{
+    font-size:25px;
+    font-weight:550;
+    text-transform:uppercase;
+    position:relative;
+    text-align: center;
+    margin:10px;
+}
+.container .title::before{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:0;
+    height:4px;
+    width:190px;
+    margin-left:215px;
+    background:linear-gradient(135deg,#71b7e6,#9b59b6);
+}
+.container form .user-details{
+    flex-wrap:wrap;
+    display:flex;
+}
+form .user-details .input-box{
+    margin:15px 40px 20px 50px;
+    width:calc(100%/2-20px);
+}
+.user-details .input-box .details{
+    display:block;
+    font-weight:550;
+    margin-bottom:10px;
+}
+.user-details .input-box input{
+    height:50px;
+    width:100%;
+    outline:none;
+    border-radius: 15px;
+    border:1px solid #ccc;
+    padding-left: 15px;
+    font-size:17px;
+    border-bottom-width:4px;
+    transition:all .3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: #9b59b6;
+}
+form .button{
+    height:45px;
+    text-align: center;
+}
+form .button input{
+    height:100%;
+    width:200px;
+    text-align: center;
+    outline:none;
+    color:#fff;
+    border-color:rgb(200, 200, 200);
+    font-size:20px;
+    font-weight:700;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 5px 5px black ;
+    letter-spacing:1px;
+    background:linear-gradient(135deg,#0b99f9,#9b59b6)
+}
+form .button input:hover{
+    background:linear-gradient(-135deg,#0b99f9,#9b59b6);
+}
+@media(max-width:584px){
+    .container{
+        max-width:100%;
+    }
+    form .user-details .input-box{
+        margin:15px;
+        width:100%;
+    }
+    .container form .user-details{
+        max-height:300px;
+        overflow-y:scroll;
+    }
+    
+}
